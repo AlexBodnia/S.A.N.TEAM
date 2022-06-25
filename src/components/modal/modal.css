@@ -1,0 +1,128 @@
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+    background: rgba(21, 21, 21, 0.6);
+    pointer-events: none;
+}
+    
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal__wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    max-height: 592px;
+    background-color: #fff;
+    margin-top: 30px;
+    position: relative;
+}
+
+.modal__content {
+    padding: 110px 122px 122px 42px;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__img {
+    max-width: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__title {
+    color: #FF8A00D6;
+    font-size: 24px;
+    line-height: 1.2;
+}
+.modal__text {
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.modal__phone{
+    color: #656565;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.modal__crosshair {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    display: block;
+    margin: -35px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .modal__wrapper{
+        flex-direction: column;
+        width: 75vw;
+        text-align: center;
+        
+    }
+    
+    .modal__content{
+        flex-direction: column;
+        height: 75vh;
+        width: 75vw;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .modal__img{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 0%;
+        overflow: hidden;
+        margin-top: 4rem;
+        
+    }
+
+    .modal__text{
+        flex-direction: column;
+        height: 22vh;
+        width: 70vw;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .modal__title{
+        flex-direction: column;
+        height: 5vh;
+        width: 70vw;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .modal__phone{
+        flex-direction: column;
+        height: 10vh;
+        width: 75vw;
+        text-align: center;
+    }
+    .modal__img{
+        display: none;
+
+    }
+   
+}
